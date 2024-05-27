@@ -1,0 +1,244 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family:'Android';
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'fontenova';
+    src: url(__MACOSX/fontes/._idroid.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --cor0: #89CDA5;
+    --cor2: #5CBE7D;
+    --cor3: #1A5A37;
+    --fonte-padrao: Arial, Verdana, Helvetica, sans_serif;
+    --box-shadow-padrao-texto: 2px 2px 5px rgba(0, 0, 0, 0.400);
+    --simbolo-link-externo: "\00a0\1F517";
+}
+
+* {
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 1px;
+    background-color: #89CDA5;
+    margin: 0px;
+}
+
+header {
+    height: 163px;
+    margin: auto;
+    padding: 10px;
+    background: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    }
+
+
+    
+header h1{
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+    padding: 0px;
+    text-align: center;
+    text-shadow: var(--box-shadow-padrao-texto);
+}
+
+h1{
+display: block;
+font-size: 2em;
+margin-block-start: 0.67em;
+margin-block-end: 0.67em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-weight: bold;
+unicode-bidi: isolate;
+}
+
+header p {
+    color: white;
+    font-size: 1em;
+    padding: 0px;
+    padding-top: 10px;
+    text-align: center;
+    text-shadow: var(--box-shadow-padrao-texto)
+}
+
+p{
+    margin-block-start: 1em;    
+    margin-block-end: 1em;    
+    margin-inline-start: 0px;    
+    margin-inline-end: 0px;    
+    unicode-bidi: isolate;
+}
+
+nav {
+    padding: 10px;
+    background-color: #1A5A37;
+}
+
+nav > a{
+    color: rgba(219, 255, 222, 0.692);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 1s;
+}
+
+nav > a:hover{
+    background-color: #23814c;
+    color: #0f3520
+
+}
+
+main{
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+main a {
+    text-decoration: none;
+    color: #0f3520;
+    font-weight: bold;
+    background-color: #C5EBD6;
+    border-radius: 2px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    color: #1A5A37;
+    text-decoration: bold;
+}
+
+article {
+    background-color: white;
+    box-shadow: 0px, 0px, 6px rgba(0, 0, 0, 0.400);
+    border-radius: 0px 0px 5px 5px;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+article  h1{
+    color: var(--cor3);
+    font-size: 2em;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.400);
+    font-family: 'Android';
+    padding: 20px;
+    margin: 0px;
+}
+
+article p {
+    color: black;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 2em;
+}
+
+article h2 {
+    background: linear-gradient(to right,  #89CDA5, white);
+    border-radius: 10px;
+    color: #1A5A37;
+    font-size: normal;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.400);
+    font-family: 'Android';
+    padding: 0px 0px 0px 10px;
+    margin: 0px;
+    font-weight: normal;
+}
+
+strong{
+    color: #1A5A37;
+    text-shadow: var(--box-shadow-padrao-texto);
+}
+
+.displayed {
+    width: 100%;
+}
+
+.pequena{
+    display: block;
+    width: 200px;
+    margin: auto;
+}
+
+.boxvideo{
+    position: relative;
+    background-color: #1A5A37;
+    padding-bottom: 56.25%;
+    padding-top: 25px;
+    margin: 0px;
+}
+
+.boxvideo iframe{
+    position: absolute;
+    top: 2.5%;
+    left: 5%;
+    width: 90%;
+    height: 95%;
+}
+
+aside h3{
+    background-color: #2FA866;
+    color: white;
+    margin: -10px -10px 0px -10px;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    text-indent: 6px;
+    font-size: 1em
+}
+
+aside{
+background-color: #C5EBD6;
+box-shadow: 3px 3px 7px -4px;
+padding: 10px;
+margin-top: 20px;
+margin-bottom: 20px;
+border-radius: 10px;
+}
+
+aside ul{
+    list-style-type: '\2714\00a0\00a0';
+    list-style-position: inside;
+    columns: 2;
+    padding: 40px;
+}
+
+* {
+    font-family: var(--fonte-padrao);
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    background-color: #1A5A37;
+    color: white;
+    padding: 5px;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.sobrepondo:hover{
+    text-decoration: underline;
+    background-color: #5CBE7D;
+    border-radius: 2px;
+    color: #0f3520;
+}
