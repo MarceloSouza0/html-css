@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 * {
-    margin: 1px -4px 1px -5px;
-    padding: 1px;
+    margin: 0px;
+    padding: 0px;
 }
 
 @font-face {
@@ -13,83 +13,66 @@
 @font-face{
     font-family: 'poema';
     src: url(imagens/Sriracha/Sriracha-Regular.ttf) format('opentype');
-}
+    }
 
-:root {
-    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+/* Definição do tamanho minimo da minha view port height */
 
-}
-
-body{
-    background-size: 100% 100%;
-    background: black center center fixed;
-    background-size: cover;
-    position: relative;
-    height: 90vh;
-    padding: 10px;
+html, body {
+    min-height: 100vh;
+    background-color: darkgray;
 }
 
 header{
     background-color: black;
-    height: 255px;
-    padding: 25px;
-    margin: -30px;
     color: white;
     text-align: center;
 }
 
-h1{
-    font-size: 5em;
-    margin: 45px;
-    font-family: 'titulo';
+header > h1{
+    padding-top: 50px;
+    /*text-transform: uppercase;*/
+    font-variant: small-caps;
 }
 
-p#titulo{
-    margin: -30px;
-    padding: 1px;
-    font-family: Arial, Helvetica, sans-serif;
+header > p{
+    padding-bottom: 50px;
 }
 
-a{
-    padding-left: 13px;
-    text-decoration: none;
+header a, footer a {
     color: white;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
-main{
-    background-color: white;
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section{
     padding-top: 10vh;
-    padding-bottom: 16vh;
-    line-height: 1em;
+    padding-bottom: 10vh;
+    line-height: 2em;
     padding-left: 30px;
-    font-family: 'poema';
-    font-size: 3.5vw;
-
-
-    
 }
 
-section.normal{
+section.normal {
     background-color: white;
     color: black;
 }
 
-section {
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 1em;
-    padding-left: 30px;
-    font-family: 'poema';
-    font-size: 3.5vw;
+section.imagem{
+    background-color: rgb(46, 46, 46);
+    color: white;
 }
 
-footer{
+section.imagem > p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+footer {
     background-color: black;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 6px;
-    margin-bottom: 10px;
-    padding-top: 0px;
-    padding-bottom: 4px;
+    padding: 10px;
 }
