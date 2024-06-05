@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,9 +20,30 @@
             padding: 10px;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
         thead, tfoot {
-            background-color: grey;
+            background-color: rgb(53, 53, 53);
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(53, 53, 53);
+        }
+
+        tbody > tr:nth-child(2n-1) {
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(2n) {  /* Efeito zebrado odd = impar, even = par */
+            background-color: lightgray;
         }
 
         td.num{
@@ -34,7 +56,8 @@
     <h1>Uso de tabelas grandes</h1>
     <!--
         ANATOMIA PARA TABELAS GRANDES
-        TABLE   
+        TABLE
+            CAPTION
             THEAD
                 TR, TD, TH
             TBODY
@@ -43,10 +66,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
                 <tr>
-                    <th>Estado</th>
-                    <th>População</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col" style="width: 100px;">População</th>
                 </tr>
         </thead>
         <tbody>
@@ -161,10 +185,20 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>203 062 512</strong></td>
             </tr>
         </tfoot>
     </table>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, commodi? Sequi fugiat unde blanditiis odit sunt dolores qui sint nam veritatis facilis placeat magnam, accusantium illo et mollitia ea? Odit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore provident at suscipit sed! Tempore, magnam ad quia aut dolor dicta, amet quisquam, saepe nostrum nihil exercitationem quos ipsam omnis libero! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur culpa nisi quam, quis id adipisci unde sit! Dolore voluptate eius explicabo distinctio possimus, doloribus quasi consequatur odio tenetur corporis nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos ipsum aperiam distinctio corporis maxime tempora cupiditate aliquid sunt quaerat, voluptatum minus, nisi incidunt sapiente obcaecati natus, dolores necessitatibus asperiores porro?</p>
 </body>
 </html>
